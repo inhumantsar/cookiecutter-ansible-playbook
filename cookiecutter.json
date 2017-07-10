@@ -1,0 +1,7 @@
+{
+  "playbook_name": "dummyplay",
+  "author": "J. Doe",
+  "description": "This playbook does stuff to hosts.",
+  "company": "Fake Co.",
+  "docker_test_image": "williamyeh/ansible:centos7"
+}

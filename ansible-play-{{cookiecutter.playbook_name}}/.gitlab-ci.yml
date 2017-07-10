@@ -1,0 +1,6 @@
+image: {{cookiecutter.docker_test_image}}
+
+test:
+  script:
+    - if [ -f 'requirements.yml' ]; then yum -y install git && ansible-galaxy install -r requirements.yml; fi
+    - ansible-playbook playbook.yml --connection=local -vvv
