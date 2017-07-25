@@ -1,2 +1,7 @@
-- debug:
-    msg: "Hello world!"
+---
+- name: Hello World!
+  hosts: all
+  connection: local
+  gather_facts: False
+  tasks: []
+  roles: []
