@@ -1,7 +1,6 @@
 ---
 - name: Hello World!
-  hosts: all
+  hosts: localhost
   connection: local
-  gather_facts: False
   tasks: []
   roles: []
