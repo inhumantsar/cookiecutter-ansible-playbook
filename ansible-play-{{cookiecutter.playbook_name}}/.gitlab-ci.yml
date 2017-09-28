@@ -8,6 +8,6 @@ test:
 #   script:
 #     # set docker image tag to latest if branch == master, else use branch name
 #     - export TAG=$(if [ $CI_COMMIT_REF_SLUG != 'master' ]; then echo $CI_COMMIT_REF_SLUG; else echo 'latest'; fi)
-#     - docker login -u $ARTIFACTORY_DOCKER_USER -p $ARTIFACTORY_DOCKER_PASS
+#     - docker login -u $ARTIFACTORY_DOCKER_USER -p $ARTIFACTORY_DOCKER_PASS $ARTIFACTORY_DOCKER_URL
 #     - docker build -t $ARTIFACTORY_DOCKER_URL/$CI_PROJECT_NAME:$TAG .
 #     - docker push $ARTIFACTORY_DOCKER_URL/$CI_PROJECT_NAME:$TAG
