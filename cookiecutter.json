@@ -1,7 +1,10 @@
 {
+  "year": 2018,
   "playbook_name": "dummyplay",
   "author": "J. Doe",
-  "description": "This playbook does stuff to hosts.",
+  "author_github": "jdoe",
   "company": "Fake Co.",
-  "docker_test_image": "inhumantsar/ansible"
+  "description": "This playbook does stuff to hosts.",
+  "docker_test_image": "inhumantsar/ansible",
+  "license": ["BSD", "MIT", "GPLv3"]
 }

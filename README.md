@@ -4,4 +4,8 @@ Simple [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) template f
 
 ## Usage
 
-    cookiecutter https://github.com/inhumantsar/cookiecutter-ansible-playbook
+`cookiecutter gh:inhumantsar/cookiecutter-ansible-playbook`
+
+* `playbook_name` - "ansible-play-" will be prepended to form the repo and directory names.
+* `author_github` - Only used in the README.
+* `docker_test_image` - Used in `.gitlab-ci.yml` and `.travis.yml`. See [the repo](https://github.com/inhumantsar/docker-ansible).

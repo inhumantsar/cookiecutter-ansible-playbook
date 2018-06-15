@@ -23,6 +23,3 @@ script:
   - ansible-playbook playbook.yml --syntax-check
   - ansible-playbook playbook.yml -c local -b
   # add other playbooks here...
-
-notifications:
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/
