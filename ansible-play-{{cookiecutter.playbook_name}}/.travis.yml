@@ -21,5 +21,5 @@ install:
 
 script:
   - ansible-playbook playbook.yml --syntax-check
-  - ansible-playbook playbook.yml -c local -b
+  - ansible-playbook playbook.yml
   # add other playbooks here...
