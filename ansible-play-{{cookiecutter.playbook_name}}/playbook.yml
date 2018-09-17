@@ -1,6 +1,5 @@
 ---
 - name: "{{cookiecutter.playbook_name}} v0.1.0 - {{cookiecutter.description}}"
-  hosts: localhost
-  connection: local
+  hosts: all
   tasks: []
   roles: []

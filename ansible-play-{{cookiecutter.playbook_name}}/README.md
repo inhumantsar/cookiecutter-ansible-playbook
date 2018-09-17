@@ -13,7 +13,7 @@ The repo is ready to go for development after answering the cookiecutter questio
 
 ## Requirements
 
-Add Ansible roles to a file named `requirements.yml` and describe them here.
+Add Ansible roles to [`roles/requirements.yml`](roles/requirements.yml) and describe them here.
 
 Also outline any additional setup required to run the playbook.
 
