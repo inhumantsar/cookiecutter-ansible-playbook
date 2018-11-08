@@ -1,20 +1,19 @@
 Vagrant.configure("2") do |config|
 
-  # Defining hardware parameters for the vm
-  config.vm.provider "virtualbox" do |v|
-      v.memory = 1024
-      v.cpus = 2
+  config.vm.provider "{{ cookiecutter.vm_provider }}" do |v|
+      v.memory = {{ cookiecutter.vm_ram }}
+      v.cpus = {{ cookiecutter.vm_cpu }}
   end
-
+  
   config.vm.define "ansible", autostart: "True" do |ansible|
-      ansible.vm.box = "centos/7"
-      ansible.vm.hostname = "ansible"
+      ansible.vm.box = "{{ cookiecutter.vagrant_box }}"
+      ansible.vm.hostname = "{{ cookiecutter.vm_hostname }}"
 
-      ansible.vm.provision "file", source: ".", destination: "/tmp/ansible-play"
       ansible.vm.provision "shell", inline: "sudo yum -y install epel-release && sudo yum -y install git vim python-pip"
       ansible.vm.provision "shell", inline: "sudo pip install ansible"
-      ansible.vm.provision "shell", inline: "(cd /tmp/ansible-play && [ -f roles/requirements.yml ] && ansible-galaxy install -r roles/requirements.yml) || echo 'No requirements file found, skipping Galaxy installs...'"
-      ansible.vm.provision "shell", inline: "(cd /tmp/ansible-play && [ -f playbook.yml ] && ansible-playbook -v playbook.yml) || echo 'No playbook found, continuing without running Ansible...'"
+      ansible.vm.provision "file", source: ".", destination: "{{ cookiecutter.ansible_path }}"
+      ansible.vm.provision "shell", inline: "(cd {{ cookiecutter.ansible_path }} && [ -f roles/requirements.yml ] && ansible-galaxy install -r roles/requirements.yml) || echo 'No requirements file found, skipping Galaxy installs...'"
+      ansible.vm.provision "shell", inline: "(cd {{ cookiecutter.ansible_path }} && [ -f playbook.yml ] && ansible-playbook -v playbook.yml) || echo 'No playbook found, continuing without running Ansible...'"
 
   end
 end
