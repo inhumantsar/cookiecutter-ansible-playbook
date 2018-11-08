@@ -27,6 +27,16 @@ See [`group_vars/all.yml`](group_vars/all.yml) for more information.
 
 Provide an example of the playbook in action.
 
+### Vagrantfile
+
+This does *not* use the Ansible provisioner as it's not usable on all Windows hosts. While most Windows hosts can be *managed* by ANsible, it is not possible (or at least not feasible) to install Ansible tools themselves on Windows hosts. 
+
+Instead, this Vagrantfile uses `shell` and `file` provisioners to install Ansible, copy the playbook to the path provided, and runs it with `ansible-playbook -v`. 
+
+To create the VM and run the playbook, use `vagrant up`.
+
+To re-provision (re-copy and re-run the playbook), use `vagrant provision`.
+
 ## Dependencies
 
 List any roles which this playbook depends on. Briefly explain why if not self-evident.
