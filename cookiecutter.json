@@ -6,5 +6,10 @@
   "company": "Fake Co.",
   "description": "This playbook does stuff to hosts.",
   "docker_test_image": "inhumantsar/ansible",
-  "license": ["BSD", "MIT", "GPLv3"]
+  "license": ["BSD", "MIT", "GPLv3"],
+  "vagrant_provider": "virtualbox",
+  "vagrant_ram": "1024",
+  "vagrant_cpus": "2",
+  "vagrant_box": "centos/7",
+  "vagrant_play_path": "/tmp/ansible-play"
 }
