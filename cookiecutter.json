@@ -6,7 +6,7 @@
   "company": "Fake Co.",
   "description": "This playbook does stuff to hosts.",
   "docker_test_image": "inhumantsar/ansible",
-  "license": ["BSD", "MIT", "GPLv3"],
+  "license": ["BSD", "MIT", "GPLv3", "Proprietary"],
   "vagrant_provider": "virtualbox",
   "vagrant_ram": "1024",
   "vagrant_cpus": "2",
