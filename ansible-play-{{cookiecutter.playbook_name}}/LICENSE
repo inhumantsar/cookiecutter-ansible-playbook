@@ -1,4 +1,9 @@
-{%- if cookiecutter.license == "BSD" -%}
+{%- if cookiecutter.license == "Proprietary" -%}
+
+Copyright (c) {{cookiecutter.year}}, {{cookiecutter.author}} {{cookiecutter.company}}
+All rights reserved.
+
+{%- elif cookiecutter.license == "BSD" -%}
 
 BSD 3-Clause License
 
